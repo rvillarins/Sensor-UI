@@ -1,0 +1,219 @@
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    margin: 0;
+  }
+.last-measurement-columns {
+    background-color: #1d1d1d;
+  }
+  
+  .measurement-section {
+    background-color: #282828;
+  }
+  
+  .warning-section {
+    height: 50px;
+    max-height: 50px;
+    min-height: 50px;
+    background-color: #ed4e08;
+  }
+  
+  .last-measurement-text-heading {
+    padding-left: 20px;
+    color: #73736b;
+  }
+  
+  .last-measurement-value-heading {
+    padding-left: 70%;
+    color: #73736b;
+  }
+  
+  .measurement-container {
+    display: block;
+    padding-top: 0px;
+    color: #d7976e;
+  }
+  
+  .warning-columns {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  
+  .rows {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 0px;
+    padding-left: 0px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  
+  .image-column {
+    padding-top: 10px;
+    padding-left: 20px;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 auto;
+    -ms-flex: 0 auto;
+    flex: 0 auto;
+  }
+  
+  .warning-message-column {
+    padding-left: 0px;
+  }
+  
+  .message-heading {
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-top: 5px;
+    padding-left: 20px;
+    color: #fff;
+  }
+  
+  .sensor-heading {
+    margin-top: auto;
+    margin-bottom: auto;
+    padding-bottom: 5px;
+    padding-left: 20px;
+  }
+  
+  .text-span {
+    color: #fff;
+  }
+  
+  .columns-4 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  
+  .measurement-value-heading {
+    display: inline-block;
+  }
+  
+  .measurement-value-div {
+    display: block;
+    margin-bottom: 0px;
+    margin-left: 45%;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+  
+  .measurement-text-div {
+    margin-top: -20px;
+    margin-left: 55%;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    color: #52453e;
+  }
+  
+  .body {
+    min-height: 180px;
+    min-width: 370px;
+  }
+  
+  @media screen and (max-width: 767px) {
+    .image-column {
+      padding-right: 0px;
+    }
+  }
+  
+  @media screen and (max-width: 479px) {
+    .measurement-section {
+      display: block;
+      max-width: 370px;
+    }
+  
+    .warning-section {
+      max-width: 370px;
+    }
+  
+    .last-measurement-text-heading {
+      max-width: 320px;
+      padding-left: 20%;
+    }
+  
+    .last-measurement-value-heading {
+      max-width: 320px;
+      padding-left: 30%;
+    }
+  
+    .measurement-container {
+      display: block;
+      max-width: 370px;
+    }
+  
+    .image-column {
+      grid-auto-columns: 1fr;
+      grid-column-gap: 16px;
+      grid-row-gap: 16px;
+      -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+    }
+  
+    .warning-column {
+      -webkit-box-pack: start;
+      -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      -webkit-box-align: baseline;
+      -webkit-align-items: baseline;
+      -ms-flex-align: baseline;
+      align-items: baseline;
+    }
+  
+    .message-heading {
+      display: inline-block;
+      margin-left: -15px;
+      padding-right: 30px;
+      padding-left: 0px;
+      font-size: 10px;
+    }
+  
+    .sensor-heading {
+      display: inline-block;
+      margin-top: 0px;
+      margin-bottom: 0px;
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
+  
+    .text-span {
+      font-size: 10px;
+    }
+  
+    .measurement-value-div {
+      display: inline-block;
+      margin-left: 30%;
+    }
+  
+    .measurement-text-div {
+      display: inline-block;
+      margin-left: 52%;
+    }
+  
+    .last-measurement-text-column {
+      padding-left: 10px;
+    }
+  
+    .warning-sensors-column {
+      padding: 0px;
+    }
+  }
