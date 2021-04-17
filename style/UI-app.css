@@ -1,10 +1,26 @@
 html {
-    font-family: sans-serif;
-    -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
+    height: 100%;
   }
-  body {
+.body {
+    max-height: 882px;
+    max-width: 1464px;
     margin: 0;
+    min-height: 100%;
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333;
+  }
+  .main-section{
+    min-height: 180px;
+    min-width: 370px;
+  }
+  * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
   }
 .last-measurement-columns {
     background-color: #1d1d1d;
@@ -38,10 +54,8 @@ html {
   }
   
   .warning-columns {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
+    max-height: 50px;
   }
   
   .rows {
@@ -122,158 +136,6 @@ html {
     padding-top: 0px;
     padding-bottom: 0px;
     color: #52453e;
-  }
-  
-  .body {
-    min-height: 180px;
-    min-width: 370px;
-  }
-  
-  @media screen and (max-width: 767px) {
-    .image-column {
-      padding-right: 0px;
-    }
-  }
-  
-  @media screen and (max-width: 479px) {
-    .measurement-section {
-      display: block;
-      max-width: 370px;
-    }
-  
-    .warning-section {
-      max-width: 370px;
-    }
-  
-    .last-measurement-text-heading {
-      max-width: 320px;
-      padding-left: 20%;
-    }
-  
-    .last-measurement-value-heading {
-      max-width: 320px;
-      padding-left: 30%;
-    }
-  
-    .measurement-container {
-      display: block;
-      max-width: 370px;
-    }
-  
-    .image-column {
-      grid-auto-columns: 1fr;
-      grid-column-gap: 16px;
-      grid-row-gap: 16px;
-      -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-      -ms-grid-rows: auto auto;
-      grid-template-rows: auto auto;
-    }
-  
-    .warning-column {
-      -webkit-box-pack: start;
-      -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-      justify-content: flex-start;
-      -webkit-box-align: baseline;
-      -webkit-align-items: baseline;
-      -ms-flex-align: baseline;
-      align-items: baseline;
-    }
-  
-    .message-heading {
-      display: inline-block;
-      margin-left: -15px;
-      padding-right: 30px;
-      padding-left: 0px;
-      font-size: 10px;
-    }
-  
-    .sensor-heading {
-      display: inline-block;
-      margin-top: 0px;
-      margin-bottom: 0px;
-      padding-top: 0px;
-      padding-bottom: 0px;
-    }
-  
-    .text-span {
-      font-size: 10px;
-    }
-  
-    .measurement-value-div {
-      display: inline-block;
-      margin-left: 30%;
-    }
-  
-    .measurement-text-div {
-      display: inline-block;
-      margin-left: 52%;
-    }
-  
-    .last-measurement-text-column {
-      padding-left: 10px;
-    }
-  
-    .warning-sensors-column {
-      padding: 0px;
-    }
-  }
-  @font-face {
-    font-family: 'webflow-icons';
-    src: url("data:application/x-font-ttf;charset=utf-8;base64,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") format('truetype');
-    font-weight: normal;
-    font-style: normal;
-  }
-  [class^="w-icon-"],
-  [class*=" w-icon-"] {
-    /* use !important to prevent issues with browser extensions that change fonts */
-    font-family: 'webflow-icons' !important;
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    /* Better Font Rendering =========== */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  .w-icon-slider-right:before {
-    content: "\e600";
-  }
-  .w-icon-slider-left:before {
-    content: "\e601";
-  }
-  .w-icon-nav-menu:before {
-    content: "\e602";
-  }
-  .w-icon-arrow-down:before,
-  .w-icon-dropdown-toggle:before {
-    content: "\e603";
-  }
-  .w-icon-file-upload-remove:before {
-    content: "\e900";
-  }
-  .w-icon-file-upload-icon:before {
-    content: "\e903";
-  }
-  * {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-  html {
-    height: 100%;
-  }
-  body {
-    margin: 0;
-    min-height: 100%;
-    background-color: #fff;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    line-height: 20px;
-    color: #333;
   }
   img {
     max-width: 100%;
@@ -1783,16 +1645,6 @@ html {
     margin-right: auto;
     margin-left: auto;
   }
-  .w-richtext figure.w-richtext-align-fullwidth > div {
-    display: inline-block;
-    /* padding-bottom is used for aspect ratios in video figures
-        we want the div to inherit that so hover/selection borders in the designer-canvas
-        fit right*/
-    padding-bottom: inherit;
-  }
-  .w-richtext figure.w-richtext-align-fullwidth > figcaption {
-    display: block;
-  }
   .w-richtext figure.w-richtext-align-floatleft {
     float: left;
     margin-right: 15px;
@@ -1925,44 +1777,8 @@ html {
   .w--nav-dropdown-list-open {
     position: static;
   }
-  @media screen and (max-width: 991px) {
-    .w-nav[data-collapse="medium"] .w-nav-menu {
-      display: none;
-    }
-    .w-nav[data-collapse="medium"] .w-nav-button {
-      display: block;
-    }
-  }
-  @media screen and (max-width: 767px) {
-    .w-nav[data-collapse="small"] .w-nav-menu {
-      display: none;
-    }
-    .w-nav[data-collapse="small"] .w-nav-button {
-      display: block;
-    }
-    .w-nav-brand {
-      padding-left: 10px;
-    }
-  }
-  @media screen and (max-width: 479px) {
-    .w-nav[data-collapse="tiny"] .w-nav-menu {
-      display: none;
-    }
-    .w-nav[data-collapse="tiny"] .w-nav-button {
-      display: block;
-    }
-  }
   .w-tabs {
     position: relative;
-  }
-  .w-tabs:before,
-  .w-tabs:after {
-    content: " ";
-    display: table;
-    grid-column-start: 1;
-    grid-row-start: 1;
-    grid-column-end: 2;
-    grid-row-end: 2;
   }
   .w-tabs:after {
     clear: both;
@@ -1999,22 +1815,7 @@ html {
   .w--tab-active {
     display: block;
   }
-  @media screen and (max-width: 479px) {
-    .w-tab-link {
-      display: block;
-    }
-  }
-  .w-ix-emptyfix:after {
-    content: "";
-  }
-  @keyframes spin {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
+ 
   .w-dyn-empty {
     padding: 10px;
     background-color: #dddddd;
