@@ -232,7 +232,7 @@
     }
   }
   
-  @media only screen and (max-device-width: 396px) {
+  @media only screen and (max-device-width: 450px) {
     .col-img {
     width:0;
     }
